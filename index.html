@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div id="resumediv">
+        <header>
+            <div>
+                <img src="images.jpeg" alt="">
+
+            </div>
+            <div id="headerh1">
+                <h1>Shahnila Baqib</h1>
+                <h3 id="header-h3">Graphics Designer</h3>
+                <br>
+                <!-- section for about -->
+                <section id="about">
+                    <p>Hi, My name is Shahnila Baqib. I have done B.F.A in Graphics Designing. I have great attention to
+                        detail and a talent for creating memorable visual designs. Enthusiastic team player who is
+                        committed to delivering top results on time and within the budget. Passion for keeping clients
+                        satisfied with each project.</p>
+                </section> <br>
+                <br>
+                <div class="contactdiv">
+                    <p><i class="fa-solid fa-phone"></i> +92 3313618533</p>
+                    <p> <i class="fa-solid fa-envelope"></i> designershahnila29@gmail.com</p>
+                    <p> <i class="fa-brands fa-linkedin"></i> shahnila-baqib</p>
+
+                </div>
+            </div>
+        </header>
+        <br>
+        <div id="maindiv">
+            <aside>
+                <!-- Education Section -->
+                <section id="edu">
+                    <h2>Education</h2>
+                    <hr>
+                    <br> <br>
+
+                    <p><b>B.F.A (HONS)</b><br>2006 - 2010<br>University of Sindh Jamshoro</p>
+                    <br>
+                    <p><b>Intermediate</b><br>2005<br>B.I.S.E Hyderabad</p>
+                    <br>
+                    <p><b>Matriculation</b><br>2003</p>
+                </section>
+                <br><br>
+
+                <!-- Trainings Section -->
+                <h2>Trainings</h2>
+                <hr>
+                <br>
+                <ul>
+                    <li>2 Months UI-UX Design from Skills Academy.</li>
+                    <li>2 Months Logo Design from Skills Academy.</li>
+                    <li>3 Months Graphics Design from NFTP.</li>
+                </ul>
+                <br>
+
+                <!-- Skills Section -->
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <hr>
+                    <br>
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Typescript</li>
+                    </ul>
+                </section>
+                <br>
+            </aside>
+
+            <main>
+
+
+                <!-- Experience Section -->
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <hr>
+                    <br> <br>
+                    <h4>Ferry Telecom Germany November 2022 Present</h4>
+                    <ul>
+                        <li>Web Banner Designs</li>
+                        <li>Visual Effects</li>
+                        <li>Product Image Editing</li>
+                    </ul>
+                    <h4>Divsnpixel Digital Agency Karachi 2023 - 2024</h4>
+                    <ul>
+                        <li>Ui-Ux Designing</li>
+                        <li>Social Media Posters</li>
+                        <li>Banners</li>
+                    </ul>
+                    <h4>Working as a Freelance Graphics Designer</h4>
+                    <ul>
+                        <li>Ui-Ux Designing</li>
+                        <li>Social Media Posters</li>
+                        <li>Banners</li>
+                        <li>Flyers</li>
+                    </ul>
+
+                </section>
+                <br>
+
+                <!-- Languages Section -->
+                <section id="languages">
+                    <h2>Languages</h2>
+                    <hr>
+                    <br>
+                    <ul>
+                        <li>English</li>
+                        <li>Urdu</li>
+                        <li>Sindhi</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Buttons to toggle different sections -->
+    <div id="btndiv">
+        <button class="btn" data-section="about">About Me</button>
+        <button class="btn" data-section="edu">Education</button>
+        <button class="btn" data-section="experience">Experience</button>
+        <button class="btn" data-section="skills">Skills</button>
+        <button class="btn" data-section="languages">Languages</button>
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        // Select all buttons and sections
+        const buttons = document.querySelectorAll('.btn');
+        const sections = document.querySelectorAll('section');
+
+        // Add event listeners to all buttons
+        buttons.forEach(button => {
+            button.addEventListener('click', function () {
+                const sectionId = this.getAttribute('data-section');
+                const section = document.getElementById(sectionId);
+
+                // Toggle visibility of the selected section
+                if (section.classList.contains('hidden')) {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
